@@ -13,8 +13,21 @@ public class WaveController : MonoBehaviour
         if (t > nextSpawnedTime && enemySpawned < CurrentWave.EnemyCount)
         {
             Spawn();
+            enemySpawned++;
             nextSpawnedTime = Time.time + CurrentWave.SpawnInterval;
         }
+    }
+    public void  ChangeWave(Wave wave)
+    {
+        CurrentWave = wave;
+
+        enemySpawned = 0;
+        nextSpawnedTime = Time.time; 
+    }
+
+    public bool IsComplete()
+    {
+        return enemySpawned >= CurrentWave.EnemyCount;
     }
 
     void Spawn()

@@ -6,6 +6,6 @@ public class Wave
 {
     public GameObject[] EnemyPrefabs;
     public int EnemyCount;
-    public float SpawnInterval = 1.0f;
+    public float SpawnInterval = 1.5f;
     public float WaveInterval = 5f;
 }

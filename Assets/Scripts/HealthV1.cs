@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class HealthV1 : MonoBehaviour
 {
-    public float health= 100;
-    private float accumHealth = 0;
+    public float Health= 100;
     public void TakeDamage(int damage)
     {
-        accumHealth += damage;
-        if (accumHealth >= 0)
+        Health += damage;
+        if (Health >= 0)
         {
             Destroy(gameObject);
         }
